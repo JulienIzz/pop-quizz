@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, TouchableOpacity, Image} from 'react-native';
+import { useState } from 'react';
 import { Theme_Colorful, Theme_GreyScale } from './src/colors';
 
 export default function App() {
 
-  const [theme, setTheme] = setState(Theme_Colorful);  
+  const [theme, setTheme] = useState(Theme_Colorful);  
 
   return (
     <View style={{backgroundColor: theme.background, flex: 1 }}>
