@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, TouchableOpacity, Image} from 'react-native';
+import { View, TouchableOpacity, Image, Text} from 'react-native';
 import { useState } from 'react';
-import { Theme_Colorful, Theme_GreyScale } from './src/colors';
+import { Theme_Colorful, Theme_Blue, Theme_Pink } from './src/colors';
+import { MediumButton } from './src/standardButton';
 
 export default function App() {
 
@@ -10,31 +11,31 @@ export default function App() {
   return (
     <View style={{backgroundColor: theme.background, flex: 1 }}>
       <StatusBar hidden={true} />
-      <View style={{flexDirection: "row", height: 75, justifyContent: 'space-evenly', marginTop: 5}}>
-        <TouchableOpacity style={{flex: 1, margin: 10}} onPress={() => console.log('pressed')}>
-          <Image 
-          style={{flex: 1,width: null, height: null, resizeMode: 'contain'}}
-          source={require('./src/img/setup.png')}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity style={{width: '64%', marginHorizontal: 5}} onPress={() => console.log('pressed')}>
+      <View style={{flexDirection: "row", height: 75, justifyContent: 'space-evenly', marginVertical: 25}}>
+
+        <TouchableOpacity 
+        style={{width: '64%', marginHorizontal: 5}} 
+        onPress={() => {
+          if (theme === Theme_Colorful) {setTheme(Theme_Pink)}
+          else if (theme === Theme_Pink) {setTheme(Theme_Colorful)}
+        }}>
           <Image 
           style={{width: null, height: 75, resizeMode: 'contain'}}
           source={require('./src/img/GameName.png')}
           />
         </TouchableOpacity>          
-        <TouchableOpacity 
-        style={{flex: 1, margin: 10}} 
-        onPress={() => {
-          if (theme == Theme_Colorful) {setTheme(Theme_GreyScale)}
-          else if (theme == Theme_GreyScale) {setTheme(Theme_Colorful)}
-        }}
-        >
-          <Image 
-          style={{flex: 1,width: null, height: null, resizeMode: 'contain'}}
-          source={require('./src/img/question_mark.png')}
-          />
-        </TouchableOpacity>
+        
+      </View>
+      
+      <View style={{height: '15%'}} />
+
+      <View style={{
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+        <MediumButton theme={theme} colorType='primary' text="JOUER" />
+        <MediumButton theme={theme} colorType='secondary' text="PARAMÈTRES" />
+        <MediumButton theme={theme} colorType='tertiary' text="AIDE" />
       </View>
     </View>
   );
