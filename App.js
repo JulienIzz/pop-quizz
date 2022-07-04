@@ -31,8 +31,3 @@ export default function App() {
     </View>
   );
 }
-
-
-const homeStyles = StyleSheet.create({
-
-});
