@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, TouchableOpacity, Image} from 'react-native';
+import { View, TouchableOpacity, Image} from 'react-native';
 import { Theme_Colorful, Theme_GreyScale } from './src/colors';
 
 export default function App() {
