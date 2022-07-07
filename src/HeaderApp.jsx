@@ -6,7 +6,7 @@ export const HeaderApp = (props) => {
     flexDirection: "row",
     height: 75,
     justifyContent: 'space-evenly',
-    marginVertical: 25
+    marginVertical: 40
   }}>
     <TouchableOpacity style={{
       width: '64%',
