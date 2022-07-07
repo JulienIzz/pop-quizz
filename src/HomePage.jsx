@@ -6,8 +6,6 @@ import { HeaderApp } from './HeaderApp';
 
 export function HomePage() {
 
-  const [theme, setTheme] = useState(Theme_Colorful);
-
   return (
     <View style={{
       backgroundColor: theme.background,
