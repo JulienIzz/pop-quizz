@@ -19,6 +19,7 @@ export const MediumButton = (props) => {
                 paddingHorizontal: 12,
                 justifyContent: 'center'
             }}
+            onPress={props.pressFunction}
         >
             <Text
                 style={{
@@ -30,4 +31,4 @@ export const MediumButton = (props) => {
             </Text>
         </TouchableOpacity>
     )
-};
+}
