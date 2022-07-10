@@ -8,7 +8,7 @@ export default function App() {
     const [theme, setTheme] = useState(Theme_Colorful);
 
     return (
-        <HomePage theme={theme} setTheme={setTheme} />
-        // <ThemePage theme={theme} setTheme={setTheme} />
+        // <HomePage theme={theme} setTheme={setTheme} />
+        <ThemePage theme={theme} setTheme={setTheme} />
     );
 }
