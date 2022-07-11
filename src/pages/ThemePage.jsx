@@ -1,12 +1,12 @@
 import { View } from 'react-native'
 import { MediumButton } from '../MediumButton'
-import { Theme_Blue, Theme_Colorful, Theme_Pink } from '../colors'
+import { Theme_Blue, Theme_Colorful, Theme_Beige } from '../Colors'
 
-export const ThemePage = (props) => {
+export const ThemePage = ({theme, setTheme}) => {
     return (
         <View
             style={{
-                backgroundColor: props.theme.background,
+                backgroundColor: theme.background,
                 flex: 1
             }}>
             <View
@@ -16,9 +16,9 @@ export const ThemePage = (props) => {
                     flex: 1
                 }}>
 
-                <MediumButton theme={props.theme} setTheme={props.setTheme} colorType='primary' text="Pétillant !" pressFunction={() => { props.setTheme(Theme_Colorful) }} />
-                <MediumButton theme={props.theme} setTheme={props.setTheme} colorType='secondary' text="Bleu" pressFunction={() => { props.setTheme(Theme_Blue) }} />
-                <MediumButton theme={props.theme} setTheme={props.setTheme} colorType='tertiary' text="Rose" pressFunction={() => { props.setTheme(Theme_Pink) }} />
+                <MediumButton theme={theme} setTheme={setTheme} colorType='primary' text={Theme_Colorful.name} pressFunction={() => { setTheme(Theme_Colorful) }} />
+                <MediumButton theme={theme} setTheme={setTheme} colorType='secondary' text={Theme_Blue.name} pressFunction={() => { setTheme(Theme_Blue) }} />
+                <MediumButton theme={theme} setTheme={setTheme} colorType='tertiary' text={Theme_Beige.name} pressFunction={() => { setTheme(Theme_Beige) }} />
 
             </View>
         </View>

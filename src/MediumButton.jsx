@@ -1,9 +1,8 @@
 import { TouchableOpacity, Text } from 'react-native';
 
-export const MediumButton = (props) => {
+export const MediumButton = ({ theme, text, pressFunction, colorType }) => {
 
-    var ButtonBackgrounColor = props.theme[props.colorType];
-
+    var ButtonBackgrounColor = theme[colorType];
     return (
         <TouchableOpacity
             style={{
@@ -19,7 +18,7 @@ export const MediumButton = (props) => {
                 paddingHorizontal: 12,
                 justifyContent: 'center'
             }}
-            onPress={props.pressFunction}
+            onPress={pressFunction}
         >
             <Text
                 style={{
@@ -27,7 +26,7 @@ export const MediumButton = (props) => {
                     fontWeight: 'bold',
                     fontSize: 18
                 }}>
-                {props.text}
+                {text}
             </Text>
         </TouchableOpacity>
     )

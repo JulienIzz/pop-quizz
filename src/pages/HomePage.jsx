@@ -2,14 +2,14 @@ import { View } from 'react-native';
 import { MediumButton } from '../MediumButton';
 import { HeaderApp } from '../HeaderApp';
 
-export const HomePage = (props) => {
+export const HomePage = ({theme, setTheme}) => {
     return (
         <View style={{
-            backgroundColor: props.theme.background,
+            backgroundColor: theme.background,
             flex: 1
         }}>
 
-            <HeaderApp theme={props.theme} setTheme={props.setTheme}></HeaderApp>
+            <HeaderApp theme={theme} setTheme={setTheme}></HeaderApp>
 
             <View style={{
                 justifyContent: 'center',
@@ -17,9 +17,9 @@ export const HomePage = (props) => {
                 flex: 1
             }}>
 
-                <MediumButton theme={props.theme} colorType='primary' text="JOUER" />
-                <MediumButton theme={props.theme} colorType='secondary' text="PARAMÈTRES" />
-                <MediumButton theme={props.theme} colorType='tertiary' text="AIDE" />
+                <MediumButton theme={theme} colorType='primary' text="JOUER" />
+                <MediumButton theme={theme} colorType='secondary' text="PARAMÈTRES" />
+                <MediumButton theme={theme} colorType='tertiary' text="AIDE" />
 
             </View>
 
