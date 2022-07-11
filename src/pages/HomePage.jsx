@@ -2,7 +2,7 @@ import { View } from "react-native";
 import { MediumButton } from "../MediumButton";
 import { HeaderApp } from "../HeaderApp";
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../Contexts/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
 
 export const HomePage = () => {

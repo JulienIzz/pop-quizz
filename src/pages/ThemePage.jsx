@@ -2,7 +2,7 @@ import { View } from "react-native";
 import { MediumButton } from "../MediumButton";
 import { Theme_Blue, Theme_Colorful, Theme_Beige } from "../Colors";
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 export const ThemePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
