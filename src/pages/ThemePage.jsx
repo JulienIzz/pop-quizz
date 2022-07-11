@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { MediumButton } from "../MediumButton";
-import { Theme_Blue, Theme_Colorful, Theme_Beige } from "../Colors";
+import { Theme_Blue, Theme_Colorful, Theme_Beige } from "../colors";
 import { useContext } from "react";
 import { ThemeContext } from "../Contexts/ThemeContext";
 
