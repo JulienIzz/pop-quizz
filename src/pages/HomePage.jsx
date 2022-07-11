@@ -28,7 +28,7 @@ export const HomePage = () => {
         <MediumButton
           theme={theme}
           colorType="secondary"
-          text="PARAMÈTRES"
+          text="THEMES"
           pressFunction={() => navigation.navigate("Themes")}
         />
         <MediumButton theme={theme} colorType="tertiary" text="AIDE" />

@@ -1,10 +1,9 @@
 import { HomePage } from "./src/pages/HomePage";
 import { ThemePage } from "./src/pages/ThemePage";
-import { HeaderApp } from "./src/HeaderApp";
-import React, { useState } from "react";
-import { Theme_Colorful, Theme_Blue } from "./src/Colors";
+import { Theme_Colorful } from "./src/Colors";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React, { useState } from "react";
 
 export const ThemeContext = React.createContext();
 
