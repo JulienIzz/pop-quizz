@@ -1,14 +1,21 @@
-import { HomePage } from './src/pages/HomePage';
-import { ThemePage } from './src/pages/ThemePage';
-import { useState } from 'react';
-import { Theme_Colorful } from './src/Colors';
+import { HomePage } from "./src/pages/HomePage";
+import { ThemePage } from "./src/pages/ThemePage";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { ThemeContextComp } from "./src/Contexts/ThemeContext";
+import React from "react";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-
-    const [theme, setTheme] = useState(Theme_Colorful);
-
-    return (
-        <HomePage theme={theme} setTheme={setTheme} />
-        // <ThemePage theme={theme} setTheme={setTheme} />
-    );
+  return (
+    <ThemeContextComp>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="Themes" component={ThemePage} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ThemeContextComp>
+  );
 }
