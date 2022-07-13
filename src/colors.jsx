@@ -9,7 +9,7 @@ export const THEME_COLORFUL = {
 };
 
 export const THEME_BLUE = {
-  name: "Rouge",
+  name: "Bleu",
   primary: "#63ADF2",
   secondary: "#A7CCED",
   tertiary: "#304D6D",
