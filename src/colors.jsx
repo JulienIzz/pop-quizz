@@ -1,4 +1,4 @@
-export const Theme_Colorful = {
+export const THEME_COLORFUL = {
   name: "Pétillant !",
   primary: "#FE4A49",
   secondary: "#2AB7CA",
@@ -8,7 +8,7 @@ export const Theme_Colorful = {
   background: "#3B8EA5",
 };
 
-export const Theme_Blue = {
+export const THEME_BLUE = {
   name: "Bleu",
   primary: "#63ADF2",
   secondary: "#A7CCED",
@@ -18,7 +18,7 @@ export const Theme_Blue = {
   background: "#545E75",
 };
 
-export const Theme_Beige = {
+export const THEME_BEIGE = {
   name: "Beige",
   primary: "#F3D8C7",
   secondary: "#EFE5DC",
