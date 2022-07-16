@@ -18,40 +18,10 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen
-            name="Home"
-            component={HomePage}
-            options={{
-              transitionSpec: {
-                open: config,
-                close: config,
-              },
-            }}
-          />
-          <Stack.Screen
-            name="Themes"
-            component={ThemePage}
-            options={{
-              transitionSpec: {
-                open: config,
-                close: config,
-              },
-            }}
-          />
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="Themes" component={ThemePage} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeContextComp>
   );
 }
-
-const config = {
-  animation: "spring",
-  config: {
-    stiffness: 10,
-    damping: 50,
-    mass: 3,
-    overshootClamping: false,
-    restDisplacementThreshold: 0.01,
-    restSpeedThreshold: 0.01,
-  },
-};
