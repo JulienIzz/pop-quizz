@@ -1,5 +1,6 @@
 import { HomePage } from "./src/pages/HomePage";
 import { ThemePage } from "./src/pages/ThemePage";
+import { GamePage } from "./src/pages/GamePage";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ThemeContextComp } from "./src/Contexts/ThemeContext";
@@ -20,6 +21,7 @@ export default function App() {
         >
           <Stack.Screen name="Home" component={HomePage} />
           <Stack.Screen name="Themes" component={ThemePage} />
+          <Stack.Screen name="Game" component={GamePage} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeContextComp>

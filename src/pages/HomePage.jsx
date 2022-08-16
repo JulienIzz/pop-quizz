@@ -17,7 +17,7 @@ export const HomePage = () => {
         flex: 1,
       }}
     >
-      <HeaderApp theme={theme} setTheme={setTheme}></HeaderApp>
+      <HeaderApp />
 
       <View
         style={{
@@ -26,7 +26,12 @@ export const HomePage = () => {
           flex: 1,
         }}
       >
-        <MediumButton theme={theme} colorType="primary" text="JOUER" />
+        <MediumButton
+          theme={theme}
+          colorType="primary"
+          text="JOUER"
+          pressFunction={() => navigation.navigate("Game")}
+        />
         <MediumButton
           theme={theme}
           colorType="secondary"
