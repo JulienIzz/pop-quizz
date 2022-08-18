@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { MediumButton } from "../MediumButton";
 import { SmallRoundButton } from "../SmallRoundButton";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../Contexts/ThemeContext";
 import { HeaderApp } from "../HeaderApp";
+import { LargeButton } from "../LargeButton";
 
 export const GamePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -19,6 +19,7 @@ export const GamePage = () => {
       <View
         style={{
           alignItems: "center",
+          marginTop: 50,
         }}
       >
         <Text
@@ -42,16 +43,32 @@ export const GamePage = () => {
           flex: 1,
         }}
       >
-        <MediumButton theme={theme} colorType="primary" text="Réponse 1" />
-        <MediumButton theme={theme} colorType="primary" text="Réponse 2" />
-        <MediumButton theme={theme} colorType="primary" text="Réponse 3" />
-        <MediumButton theme={theme} colorType="primary" text="Réponse 4" />
+        <LargeButton
+          theme={theme}
+          colorType="primary"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+        <LargeButton
+          theme={theme}
+          colorType="primary"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+        <LargeButton
+          theme={theme}
+          colorType="primary"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+        <LargeButton
+          theme={theme}
+          colorType="primary"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
       </View>
       <View
         style={{
           justifyContent: "center",
           alignItems: "center",
-          marginVertical: 8,
+          flex: 0.4,
         }}
       >
         <SmallRoundButton theme={theme} colorType="tertiary" text="Suite" />
