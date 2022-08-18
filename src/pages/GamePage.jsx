@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { MediumButton } from "../MediumButton";
+import { SmallRoundButton } from "../SmallRoundButton";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../Contexts/ThemeContext";
 import { HeaderApp } from "../HeaderApp";
@@ -50,13 +51,10 @@ export const GamePage = () => {
         style={{
           justifyContent: "center",
           alignItems: "center",
+          marginVertical: 8,
         }}
       >
-        <MediumButton
-          theme={theme}
-          colorType="tertiary"
-          text="Question suivante"
-        />
+        <SmallRoundButton theme={theme} colorType="tertiary" text="Suite" />
       </View>
     </View>
   );
