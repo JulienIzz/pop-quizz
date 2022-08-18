@@ -17,18 +17,16 @@ export const GamePage = () => {
       <HeaderApp />
       <View
         style={{
-          justifyContent: "center",
           alignItems: "center",
-          flex: 1,
         }}
       >
         <Text
           style={{
             color: "white",
             fontWeight: "bold",
-            fontSize: 30,
+            fontSize: 24,
             textAlign: "center",
-            marginHorizontal: 10,
+            width: "90%",
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
@@ -52,9 +50,14 @@ export const GamePage = () => {
         style={{
           justifyContent: "center",
           alignItems: "center",
-          flex: 0.5,
         }}
-      ></View>
+      >
+        <MediumButton
+          theme={theme}
+          colorType="tertiary"
+          text="Question suivante"
+        />
+      </View>
     </View>
   );
 };

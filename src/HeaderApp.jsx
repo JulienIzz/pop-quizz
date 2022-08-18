@@ -8,7 +8,8 @@ export const HeaderApp = () => {
         flexDirection: "row",
         height: 75,
         justifyContent: "space-evenly",
-        marginVertical: 60,
+        marginTop: 60,
+        marginBottom: 20,
       }}
     >
       <TouchableOpacity
