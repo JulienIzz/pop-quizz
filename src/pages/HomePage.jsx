@@ -1,10 +1,10 @@
 import { View } from "react-native";
-import { MediumButton } from "../MediumButton";
-import { HeaderApp } from "../HeaderApp";
+import { MediumButton } from "../components/MediumButton";
+import { HeaderApp } from "../components/HeaderApp";
 import { useContext, useState } from "react";
-import { ThemeContext } from "../Contexts/ThemeContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
-import { ModaleAide } from "../ModaleAide";
+import { ModaleAide } from "../others/ModaleAide";
 
 export const HomePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);

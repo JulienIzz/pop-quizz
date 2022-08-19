@@ -3,7 +3,7 @@ import { ThemePage } from "./src/pages/ThemePage";
 import { GamePage } from "./src/pages/GamePage";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { ThemeContextComp } from "./src/Contexts/ThemeContext";
+import { ThemeContextComp } from "./src/contexts/ThemeContext";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 

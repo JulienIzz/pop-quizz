@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { SmallRoundButton } from "../SmallRoundButton";
+import { SmallRoundButton } from "../components/SmallRoundButton";
 import { useContext, useState } from "react";
-import { ThemeContext } from "../Contexts/ThemeContext";
-import { HeaderApp } from "../HeaderApp";
-import { LargeButton } from "../LargeButton";
+import { ThemeContext } from "../contexts/ThemeContext";
+import { HeaderApp } from "../components/HeaderApp";
+import { LargeButton } from "../components/LargeButton";
 
 export const GamePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
