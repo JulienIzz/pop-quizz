@@ -5,6 +5,9 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { HeaderApp } from "../components/HeaderApp";
 import { LargeButton } from "../components/LargeButton";
+import { GameQuestions } from "../Questions";
+
+var questionNumber = 1;
 
 export const GamePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -32,9 +35,7 @@ export const GamePage = () => {
             width: "90%",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-          ultricies sed, dolor ?
+          {GameQuestions[questionNumber].text}
         </Text>
       </View>
       <View
@@ -47,22 +48,22 @@ export const GamePage = () => {
         <LargeButton
           theme={theme}
           colorType="primary"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          text={GameQuestions[questionNumber].answers[0].text}
         />
         <LargeButton
           theme={theme}
           colorType="primary"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          text={GameQuestions[questionNumber].answers[1].text}
         />
         <LargeButton
           theme={theme}
           colorType="primary"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          text={GameQuestions[questionNumber].answers[2].text}
         />
         <LargeButton
           theme={theme}
           colorType="primary"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          text={GameQuestions[questionNumber].answers[3].text}
         />
         <SmallRoundButton theme={theme} colorType="tertiary" text="Suite" />
       </View>
