@@ -19,7 +19,8 @@ export const GamePage = () => {
       <View
         style={{
           alignItems: "center",
-          marginTop: 50,
+          justifyContent: "center",
+          flex: 1,
         }}
       >
         <Text
@@ -40,7 +41,7 @@ export const GamePage = () => {
         style={{
           justifyContent: "center",
           alignItems: "center",
-          flex: 1,
+          marginBottom: 10,
         }}
       >
         <LargeButton
@@ -63,14 +64,6 @@ export const GamePage = () => {
           colorType="primary"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-      </View>
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          flex: 0.4,
-        }}
-      >
         <SmallRoundButton theme={theme} colorType="tertiary" text="Suite" />
       </View>
     </View>

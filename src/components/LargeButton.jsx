@@ -5,8 +5,8 @@ export const LargeButton = ({ theme, text, pressFunction, colorType }) => {
   return (
     <TouchableOpacity
       style={{
-        margin: 8,
-        height: 60,
+        margin: 4,
+        height: 70,
         width: "80%",
         maxWidth: 500,
         minWidth: 50,

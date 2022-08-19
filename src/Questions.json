@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "text": "Lorem ipsum 1 ?",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Lorem 1 false 1 ipsum.",
+        "good": false
+      },
+      {
+        "id": 2,
+        "text": "Lorem 1 false 2 ipsum.",
+        "good": false
+      },
+      {
+        "id": 3,
+        "text": "Lorem 1 true 3 ipsum.",
+        "good": true
+      },
+      {
+        "id": 4,
+        "text": "Lorem 1 false 4 ipsum.",
+        "good": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Lorem ipsum 2 ?",
+    "answers": [
+      {
+        "id": 1,
+        "text": "Lorem 2 true 1 ipsum.",
+        "good": true
+      },
+      {
+        "id": 2,
+        "text": "Lorem 2 false 2 ipsum.",
+        "good": false
+      },
+      {
+        "id": 3,
+        "text": "Lorem 2 false 3 ipsum.",
+        "good": false
+      },
+      {
+        "id": 4,
+        "text": "Lorem 2 false 4 ipsum.",
+        "good": false
+      }
+    ]
+  }
+]

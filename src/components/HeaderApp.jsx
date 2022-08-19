@@ -25,7 +25,7 @@ export const HeaderApp = () => {
             height: 75,
             resizeMode: "contain",
           }}
-          source={require("../src/img/GameName.png")}
+          source={require("../img/GameName.png")}
         />
       </TouchableOpacity>
     </View>
