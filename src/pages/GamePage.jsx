@@ -1,20 +1,25 @@
 import { View, Text } from "react-native";
-import React from "react";
 import { SmallRoundButton } from "../components/SmallRoundButton";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { HeaderApp } from "../components/HeaderApp";
 import { LargeButton } from "../components/LargeButton";
 import { GameQuestions } from "../Questions";
 import { TestAnswerButton } from "../others/TestAnswerButton";
-import { STARTING_BUTTON_COLOR } from "../Constants";
+import { STARTING_BUTTON_COLOR, MAX_NUMBER_QUESTIONS } from "../Constants";
+import { NextButton } from "../others/NextButton";
+import { getRandomInt } from "../others/Random";
 
 export const GamePage = () => {
+  var firstQuestion = getRandomInt(MAX_NUMBER_QUESTIONS);
   const { theme, setTheme } = useContext(ThemeContext);
-
   const [buttonColors, setButtonColors] = useState(STARTING_BUTTON_COLOR);
-
-  const [questionNumber, setQuestionNumber] = useState(0);
+  const [questionNumber, setQuestionNumber] = useState(firstQuestion);
+  const [numberOfQuestionsAnswered, setQuestionAnswered] = useState(0);
+  const [numberOfQuestionDisplayed, setQuestionDisplayed] = useState(1);
+  const [userScore, setUserScore] = useState(0);
+  const [nextButtonState, setNextButton] = useState([true, 0]);
+  const [questionDisplayedList, setQuestionDisplayedList] = useState([]);
 
   return (
     <View
@@ -54,7 +59,17 @@ export const GamePage = () => {
           theme={theme}
           colorType={buttonColors[0]}
           pressFunction={() =>
-            TestAnswerButton(questionNumber, 1, setButtonColors)
+            TestAnswerButton(
+              questionNumber,
+              1,
+              setButtonColors,
+              setQuestionAnswered,
+              numberOfQuestionsAnswered,
+              numberOfQuestionDisplayed,
+              userScore,
+              setUserScore,
+              setNextButton
+            )
           }
           text={GameQuestions[questionNumber].answers[0].text}
         />
@@ -62,7 +77,17 @@ export const GamePage = () => {
           theme={theme}
           colorType={buttonColors[1]}
           pressFunction={() =>
-            TestAnswerButton(questionNumber, 2, setButtonColors)
+            TestAnswerButton(
+              questionNumber,
+              2,
+              setButtonColors,
+              setQuestionAnswered,
+              numberOfQuestionsAnswered,
+              numberOfQuestionDisplayed,
+              userScore,
+              setUserScore,
+              setNextButton
+            )
           }
           text={GameQuestions[questionNumber].answers[1].text}
         />
@@ -70,7 +95,17 @@ export const GamePage = () => {
           theme={theme}
           colorType={buttonColors[2]}
           pressFunction={() =>
-            TestAnswerButton(questionNumber, 3, setButtonColors)
+            TestAnswerButton(
+              questionNumber,
+              3,
+              setButtonColors,
+              setQuestionAnswered,
+              numberOfQuestionsAnswered,
+              numberOfQuestionDisplayed,
+              userScore,
+              setUserScore,
+              setNextButton
+            )
           }
           text={GameQuestions[questionNumber].answers[2].text}
         />
@@ -78,11 +113,38 @@ export const GamePage = () => {
           theme={theme}
           colorType={buttonColors[3]}
           pressFunction={() =>
-            TestAnswerButton(questionNumber, 4, setButtonColors)
+            TestAnswerButton(
+              questionNumber,
+              4,
+              setButtonColors,
+              setQuestionAnswered,
+              numberOfQuestionsAnswered,
+              numberOfQuestionDisplayed,
+              userScore,
+              setUserScore,
+              setNextButton
+            )
           }
           text={GameQuestions[questionNumber].answers[3].text}
         />
-        <SmallRoundButton theme={theme} colorType="secondary" text="Suite" />
+        <SmallRoundButton
+          theme={theme}
+          colorType="secondary"
+          text={userScore}
+          pressFunction={() =>
+            NextButton(
+              numberOfQuestionDisplayed,
+              setQuestionDisplayed,
+              setNextButton,
+              questionDisplayedList,
+              setQuestionDisplayedList,
+              questionNumber,
+              setQuestionNumber,
+              setButtonColors
+            )
+          }
+          state={nextButtonState}
+        />
       </View>
     </View>
   );

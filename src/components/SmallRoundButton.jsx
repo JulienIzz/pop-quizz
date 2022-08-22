@@ -1,6 +1,12 @@
 import { TouchableOpacity, Text } from "react-native";
 
-export const SmallRoundButton = ({ theme, text, pressFunction, colorType }) => {
+export const SmallRoundButton = ({
+  theme,
+  text,
+  pressFunction,
+  colorType,
+  state,
+}) => {
   var ButtonBackgrounColor = theme[colorType];
   return (
     <TouchableOpacity
@@ -16,8 +22,10 @@ export const SmallRoundButton = ({ theme, text, pressFunction, colorType }) => {
         paddingVertical: 10,
         paddingHorizontal: 12,
         justifyContent: "center",
+        opacity: state[1],
       }}
       onPress={pressFunction}
+      disabled={state[0]}
     >
       <Text
         style={{

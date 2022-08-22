@@ -1,20 +1,20 @@
 export const GameQuestions = [
   {
     id: 1,
-    text: "Question numéro 1",
+    text: "Quelle est la couleur du cheval blanc d'Henri IV ?",
     answerNumber: 3,
     answers: [
       {
-        text: "Réponse 1x1 : Fausse",
+        text: "Rouge",
       },
       {
-        text: "Réponse 1x2 : Fausse",
+        text: "Bleu",
       },
       {
-        text: "Réponse 1x3 : Vraie",
+        text: "Blanc",
       },
       {
-        text: "Réponse 1x4 : Fausse",
+        text: "Je ne sais pas",
       },
     ],
   },

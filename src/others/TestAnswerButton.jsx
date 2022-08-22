@@ -13,21 +13,33 @@ const changeButtonColor = (
 export const TestAnswerButton = (
   questionNumber,
   buttonNumber,
-  setButtonColors
+  setButtonColors,
+  setQuestionAnswered,
+  numberOfQuestionsAnswered,
+  numberOfQuestionDisplayed,
+  userScore,
+  setUserScore,
+  setNextButton
 ) => {
-  var actualButtonColors = ["grey", "grey", "grey", "grey"];
-  changeButtonColor(
-    actualButtonColors,
-    setButtonColors,
-    GameQuestions[questionNumber].answerNumber,
-    "win"
-  );
-  if (GameQuestions[questionNumber].answerNumber !== buttonNumber) {
+  if (numberOfQuestionDisplayed !== numberOfQuestionsAnswered) {
+    setNextButton([false, 1]);
+    setQuestionAnswered(numberOfQuestionsAnswered + 1);
+    var actualButtonColors = ["grey", "grey", "grey", "grey"];
     changeButtonColor(
       actualButtonColors,
       setButtonColors,
-      buttonNumber,
-      "lose"
+      GameQuestions[questionNumber].answerNumber,
+      "win"
     );
+    if (GameQuestions[questionNumber].answerNumber !== buttonNumber) {
+      changeButtonColor(
+        actualButtonColors,
+        setButtonColors,
+        buttonNumber,
+        "lose"
+      );
+    } else {
+      setUserScore(userScore + 1);
+    }
   }
 };
