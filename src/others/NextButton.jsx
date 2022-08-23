@@ -18,7 +18,7 @@ export const NextButton = (
 ) => {
   var newList = questionDisplayedList;
   if (newList.length + 1 === MAX_GAME_QUESTIONS) {
-    navigation.navigate("End");
+    navigation.replace("End");
   } else {
     newList.push(questionNumber);
     setQuestionDisplayedList(newList);
