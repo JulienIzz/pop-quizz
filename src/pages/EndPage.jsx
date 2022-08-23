@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { MediumButton } from "../components/MediumButton";
 import { HeaderApp } from "../components/HeaderApp";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
 import { ScoreContext } from "../contexts/ScoreContext";
