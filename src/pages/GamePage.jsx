@@ -10,6 +10,7 @@ import { TestAnswerButton } from "../others/TestAnswerButton";
 import { STARTING_BUTTON_COLOR, MAX_NUMBER_QUESTIONS } from "../Constants";
 import { NextButton } from "../others/NextButton";
 import { getRandomInt } from "../others/Random";
+import { useNavigation } from "@react-navigation/native";
 
 export const GamePage = () => {
   var firstQuestion = getRandomInt(MAX_NUMBER_QUESTIONS);
@@ -21,6 +22,7 @@ export const GamePage = () => {
   const [numberOfQuestionDisplayed, setQuestionDisplayed] = useState(1);
   const [nextButtonState, setNextButton] = useState([true, 0]);
   const [questionDisplayedList, setQuestionDisplayedList] = useState([]);
+  const navigation = useNavigation();
 
   return (
     <View
@@ -141,7 +143,8 @@ export const GamePage = () => {
               setQuestionDisplayedList,
               questionNumber,
               setQuestionNumber,
-              setButtonColors
+              setButtonColors,
+              navigation
             )
           }
           state={nextButtonState}

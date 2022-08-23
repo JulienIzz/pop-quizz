@@ -13,11 +13,12 @@ export const NextButton = (
   setQuestionDisplayedList,
   questionNumber,
   setQuestionNumber,
-  setButtonColors
+  setButtonColors,
+  navigation
 ) => {
   var newList = questionDisplayedList;
   if (newList.length + 1 === MAX_GAME_QUESTIONS) {
-    console.log("Ici afficher le score et terminer la partie");
+    navigation.navigate("End");
   } else {
     newList.push(questionNumber);
     setQuestionDisplayedList(newList);
