@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "my-react-native-app",
+    "name": "PopQuizz",
+    "description": "Une app de Quizz colorée",
     "slug": "my-react-native-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,6 +22,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.Juju.PopQuizz",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -28,6 +30,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ff3ba055-27c8-465c-8545-38f74123e4c1"
+      }
     }
   }
 }
