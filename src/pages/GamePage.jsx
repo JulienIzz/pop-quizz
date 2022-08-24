@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import { SmallRoundButton } from "../components/SmallRoundButton";
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
+import { ScoreContext } from "../contexts/ScoreContext";
 import { HeaderApp } from "../components/HeaderApp";
 import { LargeButton } from "../components/LargeButton";
 import { GameQuestions } from "../Questions";
@@ -9,17 +10,19 @@ import { TestAnswerButton } from "../others/TestAnswerButton";
 import { STARTING_BUTTON_COLOR, MAX_NUMBER_QUESTIONS } from "../Constants";
 import { NextButton } from "../others/NextButton";
 import { getRandomInt } from "../others/Random";
+import { useNavigation } from "@react-navigation/native";
 
 export const GamePage = () => {
   var firstQuestion = getRandomInt(MAX_NUMBER_QUESTIONS);
   const { theme, setTheme } = useContext(ThemeContext);
+  const { userScore, setUserScore } = useContext(ScoreContext);
   const [buttonColors, setButtonColors] = useState(STARTING_BUTTON_COLOR);
   const [questionNumber, setQuestionNumber] = useState(firstQuestion);
   const [numberOfQuestionsAnswered, setQuestionAnswered] = useState(0);
   const [numberOfQuestionDisplayed, setQuestionDisplayed] = useState(1);
-  const [userScore, setUserScore] = useState(0);
   const [nextButtonState, setNextButton] = useState([true, 0]);
   const [questionDisplayedList, setQuestionDisplayedList] = useState([]);
+  const navigation = useNavigation();
 
   return (
     <View
@@ -130,7 +133,7 @@ export const GamePage = () => {
         <SmallRoundButton
           theme={theme}
           colorType="secondary"
-          text={userScore}
+          text="Suite"
           pressFunction={() =>
             NextButton(
               numberOfQuestionDisplayed,
@@ -140,7 +143,8 @@ export const GamePage = () => {
               setQuestionDisplayedList,
               questionNumber,
               setQuestionNumber,
-              setButtonColors
+              setButtonColors,
+              navigation
             )
           }
           state={nextButtonState}
