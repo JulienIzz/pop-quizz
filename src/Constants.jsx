@@ -9,4 +9,4 @@ export const STARTING_BUTTON_COLOR = [
 
 export const MAX_NUMBER_QUESTIONS = GameQuestions.length;
 
-export const MAX_GAME_QUESTIONS = 5;
+export const MAX_GAME_QUESTIONS = 10;
