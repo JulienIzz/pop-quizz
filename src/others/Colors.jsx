@@ -5,6 +5,8 @@ export const THEME_COLORFUL = {
   tertiary: "#FED766",
   grey: "#E6E6EA",
   neutral: "#F4F4F8",
+  win: "#0AC204",
+  lose: "#D32500",
   background: "#3B8EA5",
 };
 
@@ -15,6 +17,8 @@ export const THEME_BLUE = {
   tertiary: "#304D6D",
   grey: "#E6E6EA",
   neutral: "#82A0BC",
+  win: "#0AC204",
+  lose: "#D32500",
   background: "#545E75",
 };
 
@@ -25,5 +29,7 @@ export const THEME_BEIGE = {
   tertiary: "#FBFEFB",
   grey: "#E6E6EA",
   neutral: "#FBFEF9",
+  win: "#0AC204",
+  lose: "#D32500",
   background: "#D0B8AC",
 };

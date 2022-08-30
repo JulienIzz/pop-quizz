@@ -1,10 +1,10 @@
 import { View } from "react-native";
-import { MediumButton } from "../MediumButton";
-import { HeaderApp } from "../HeaderApp";
+import { MediumButton } from "../components/MediumButton";
+import { HeaderApp } from "../components/HeaderApp";
 import { useContext, useState } from "react";
-import { ThemeContext } from "../Contexts/ThemeContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 import { useNavigation } from "@react-navigation/native";
-import { ModaleAide } from "../ModaleAide";
+import { ModaleAide } from "../others/ModaleAide";
 
 export const HomePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -17,7 +17,7 @@ export const HomePage = () => {
         flex: 1,
       }}
     >
-      <HeaderApp theme={theme} setTheme={setTheme}></HeaderApp>
+      <HeaderApp />
 
       <View
         style={{
@@ -26,7 +26,12 @@ export const HomePage = () => {
           flex: 1,
         }}
       >
-        <MediumButton theme={theme} colorType="primary" text="JOUER" />
+        <MediumButton
+          theme={theme}
+          colorType="primary"
+          text="JOUER"
+          pressFunction={() => navigation.navigate("Game")}
+        />
         <MediumButton
           theme={theme}
           colorType="secondary"
