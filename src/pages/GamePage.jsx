@@ -32,6 +32,17 @@ export const GamePage = () => {
       }}
     >
       <HeaderApp />
+      <View style={{ alignItems: "center" }}>
+        <Text
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            fontSize: 20,
+          }}
+        >
+          Question n°{numberOfQuestionDisplayed}/10
+        </Text>
+      </View>
       <View
         style={{
           alignItems: "center",
