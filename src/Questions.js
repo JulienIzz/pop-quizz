@@ -913,20 +913,20 @@ export const GameQuestions = [
   },
   {
     id: 49,
-    text: "5",
+    text: "Quelle ville a habité le célèbre meurtrier Henri Désiré Landru ?",
     answerNumber: 4,
     answers: [
       {
-        text: "X",
+        text: "Sartrouville",
       },
       {
-        text: "X",
+        text: "Gambais",
       },
       {
-        text: "X",
+        text: "Joinville-le-pont",
       },
       {
-        text: "X",
+        text: "Fréjus",
       },
     ],
   },
@@ -1046,7 +1046,7 @@ export const GameQuestions = [
   },
   {
     id: 56,
-    text: "Dans quel film de Werner Herzog suit-on un groupe de de conquistadores à la recherche de l’Eldorado ?",
+    text: "Dans quel film de Werner Herzog suit-on un groupe de conquistadores à la recherche de l’Eldorado ?",
     answerNumber: 1,
     answers: [
       {
