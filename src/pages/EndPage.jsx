@@ -49,7 +49,7 @@ export const EndPage = () => {
             margin: 25,
           }}
         >
-          {userScore}
+          {userScore}/10
         </Text>
         <Text
           style={{
