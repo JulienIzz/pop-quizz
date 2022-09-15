@@ -23,7 +23,7 @@ export const LargeButton = ({ theme, text, pressFunction, colorType }) => {
         style={{
           textAlign: "center",
           fontWeight: "bold",
-          fontSize: 18,
+          fontSize: 14,
         }}
       >
         {text}
