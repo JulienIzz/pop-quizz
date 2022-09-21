@@ -20,13 +20,28 @@ export default function App() {
           <Stack.Navigator
             screenOptions={{
               headerShown: false,
-              cardStyleInterpolator: forFade,
             }}
           >
-            <Stack.Screen name="Home" component={HomePage} />
-            <Stack.Screen name="Themes" component={ThemePage} />
-            <Stack.Screen name="Game" component={GamePage} />
-            <Stack.Screen name="End" component={EndPage} />
+            <Stack.Screen
+              name="Home"
+              component={HomePage}
+              options={{ animation: "fade" }}
+            />
+            <Stack.Screen
+              name="Themes"
+              component={ThemePage}
+              options={{ animation: "fade" }}
+            />
+            <Stack.Screen
+              name="Game"
+              component={GamePage}
+              options={{ animation: "fade" }}
+            />
+            <Stack.Screen
+              name="End"
+              component={EndPage}
+              options={{ animation: "fade" }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </ScoreContextComp>
