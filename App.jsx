@@ -10,6 +10,7 @@ import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 import { useContext } from "react";
 import { ThemeContext } from "./src/contexts/ThemeContext";
+import { HeaderApp } from "./src/components/HeaderApp";
 import React from "react";
 
 const Stack = createNativeStackNavigator();
@@ -30,6 +31,7 @@ export default function App() {
       <ThemeBackgroundWrapper>
         <ScoreContextComp>
           <StatusBar style="light" />
+          <HeaderApp />
           <NavigationContainer>
             <Stack.Navigator
               screenOptions={{

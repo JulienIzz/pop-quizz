@@ -31,7 +31,6 @@ export const GamePage = () => {
         flex: 1,
       }}
     >
-      <HeaderApp />
       <View style={{ alignItems: "center" }}>
         <Text
           style={{

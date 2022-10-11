@@ -17,8 +17,6 @@ export const HomePage = () => {
         flex: 1,
       }}
     >
-      <HeaderApp />
-
       <View
         style={{
           justifyContent: "center",
