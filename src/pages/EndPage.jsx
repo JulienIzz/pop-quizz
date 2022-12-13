@@ -19,8 +19,6 @@ export const EndPage = () => {
         flex: 1,
       }}
     >
-      <HeaderApp />
-
       <View
         style={{
           justifyContent: "center",

@@ -17,7 +17,7 @@ export const HeaderApp = () => {
           width: "64%",
           marginHorizontal: 5,
         }}
-        onPress={() => Alert.alert("C'est trop pipou", "Charline je t'aime")}
+        onPress={() => Alert.alert("C'est trop pipou", "Hihihi")}
       >
         <Image
           style={{
