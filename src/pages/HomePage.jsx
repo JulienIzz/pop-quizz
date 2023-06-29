@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Linking, View } from "react-native";
 import { MediumButton } from "../components/MediumButton";
 import { HeaderApp } from "../components/HeaderApp";
 import { useContext, useState } from "react";
@@ -41,6 +41,14 @@ export const HomePage = () => {
           colorType="tertiary"
           text="AIDE"
           pressFunction={() => setModalVisible(!modalVisible)}
+        />
+        <MediumButton
+          theme={theme}
+          colorType="neutral"
+          text="CONFIDENTIALITE"
+          pressFunction={() =>
+            Linking.openURL("https://papyroach.github.io/confidentiality.html")
+          }
         />
       </View>
 
