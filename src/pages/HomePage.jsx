@@ -47,7 +47,9 @@ export const HomePage = () => {
           colorType="neutral"
           text="CONFIDENTIALITE"
           pressFunction={() =>
-            Linking.openURL("https://papyroach.github.io/confidentiality.html")
+            Linking.openURL(
+              "https://papyroach.github.io/confidentialitypop.html"
+            )
           }
         />
       </View>
