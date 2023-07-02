@@ -15,13 +15,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 2,
       "package": "com.Juju.PopQuizz",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
