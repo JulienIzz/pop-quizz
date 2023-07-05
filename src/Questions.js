@@ -914,7 +914,7 @@ export const GameQuestions = [
   {
     id: 49,
     text: "Quelle ville a habité le célèbre meurtrier Henri Désiré Landru ?",
-    answerNumber: 4,
+    answerNumber: 2,
     answers: [
       {
         text: "Sartrouville",
@@ -1008,7 +1008,7 @@ export const GameQuestions = [
   },
   {
     id: 54,
-    text: "Quelle épreuve sportive a été créée Géo Lefebvre et Henri Desgrange ?",
+    text: "Quelle épreuve sportive a été créée par Géo Lefebvre et Henri Desgrange ?",
     answerNumber: 4,
     answers: [
       {

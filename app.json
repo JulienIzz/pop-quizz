@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "android": {
-      "versionCode": 2,
+      "versionCode": 3,
       "package": "com.Juju.PopQuizz",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
