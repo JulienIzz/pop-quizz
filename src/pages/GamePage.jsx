@@ -1,9 +1,8 @@
-import { View, Text } from "react-native";
+import { View, Text, BackHandler } from "react-native";
 import { SmallRoundButton } from "../components/SmallRoundButton";
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { ScoreContext } from "../contexts/ScoreContext";
-import { HeaderApp } from "../components/HeaderApp";
 import { LargeButton } from "../components/LargeButton";
 import { GameQuestions } from "../Questions";
 import { TestAnswerButton } from "../others/TestAnswerButton";
@@ -23,6 +22,10 @@ export const GamePage = () => {
   const [nextButtonState, setNextButton] = useState([true, 0]);
   const [questionDisplayedList, setQuestionDisplayedList] = useState([]);
   const navigation = useNavigation();
+
+  BackHandler.addEventListener("hardwareBackPress", () => {
+    setUserScore(0);
+  });
 
   return (
     <View
@@ -144,7 +147,7 @@ export const GamePage = () => {
           theme={theme}
           colorType="secondary"
           text="Suite"
-          pressFunction={() =>
+          pressFunction={() => {
             NextButton(
               numberOfQuestionDisplayed,
               setQuestionDisplayed,
@@ -155,8 +158,10 @@ export const GamePage = () => {
               setQuestionNumber,
               setButtonColors,
               navigation
-            )
-          }
+            );
+
+            console.log(userScore);
+          }}
           state={nextButtonState}
         />
       </View>

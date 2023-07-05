@@ -3,7 +3,7 @@
     "name": "PopQuizz",
     "description": "Une app de Quizz colorée",
     "slug": "my-react-native-app",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "android": {
-      "versionCode": 3,
+      "versionCode": 4,
       "package": "com.Juju.PopQuizz",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
